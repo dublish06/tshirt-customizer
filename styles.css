@@ -1,0 +1,176 @@
+/* Gradient background for the entire page */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, lightcoral, mistyrose, mistyrose);
+    overflow: hidden; /* Prevent scrollbars if the container overflows */
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid black; /* Add border to the container */
+    width: 600px; /* Fixed width for the container */
+    max-width: 90vw; /* Ensure it doesn't exceed 90% of viewport width */
+    max-height: 90vh; /* Ensure it doesn't exceed 90% of viewport height */
+    overflow: auto; /* Add scrollbars if the content exceeds container dimensions */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: darkblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Customizer controls layout */
+.customizer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Labels for color picker and file uploader */
+.input-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: darkgoldenrod;
+    margin-bottom: 1px;
+}
+
+/* Preview box for T-shirt */
+#tshirtPreview {
+    width: 250px;
+    height: 350px;
+    position: relative;
+    margin: 10px auto;
+    background-image: url('images/border.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Color overlay on T-shirt */
+#tshirtColorOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/* Design overlay positioning */
+.design-overlay {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Button styling */
+button {
+    padding: 10px 24px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for button */
+button:hover {
+    background-color: darkblue;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Input field styling */
+input[type="color"],
+input[type="file"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+/* Shadow effect on hover for input fields */
+input[type="color"]:hover,
+input[type="file"]:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #tshirtPreview {
+        width: 200px;
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #tshirtPreview {
+        width: 150px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .customizer {
+        gap: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    input[type="color"],
+    input[type="file"] {
+        font-size: 0.9rem;
+    }
+}

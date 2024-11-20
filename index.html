@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-shirt Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>T-shirt Customizer</h1>
+        <div class="customizer">
+            <!-- Label for the color picker -->
+            <label for="colorPicker" class="input-label">Choose T-shirt Color:</label>
+            <input type="color" id="colorPicker" title="Choose T-shirt Color">
+            
+            <!-- Label for the file uploader -->
+            <label for="fileUploader" class="input-label">Upload Design:</label>
+            <input type="file" id="fileUploader" accept="image/*" title="Upload Design">
+            
+            <div id="tshirtPreview">
+                <div id="tshirtColorOverlay"></div>
+                <div id="designOverlay" class="design-overlay"></div>
+            </div>
+            <button id="downloadBtn">Download Design</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
